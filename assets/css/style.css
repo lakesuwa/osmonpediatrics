@@ -136,7 +136,7 @@ p { margin: 0; line-height: 1.6; }
   color: var(--navy-text);
 }
 .link-arrow svg { transition: transform .15s ease; }
-.link-arrow:hover svg { transform: translateX(3px); }
+.svc-card .link-arrow:hover svg { transform: translateX(12px); }
 
 /* ===== Top utility bar ===== */
 .topbar {
