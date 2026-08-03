@@ -30,6 +30,7 @@
   --lav-text: #b35fd2;
   --pink-bg: #e9d4db;
   --pink-text: #d81159;
+  --profile-blue: #829dbb;
   --ink: #333;
   --gray-text: #555;
   --border: #e5e7ec;
@@ -441,16 +442,41 @@ p { margin: 0; line-height: 1.6; }
 /* ===== About page ===== */
 .mission-split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .mission-split img { border-radius: var(--radius); }
+.mission-split__placeholder { background: #d9d9d9; border-radius: var(--radius); min-height: 320px; }
 .mission-text h2 { line-height: 1.2; margin-bottom: 18px; }
 .mission-text p { color: #404040; font-size: 0.97rem; line-height: 1.65; }
 
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.team-grid--2 { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; }
 .team-card { background: #fff; border-radius: var(--radius); overflow: hidden; }
 .team-card__photo { height: 220px; background-size: cover; background-position: center top; }
 .team-card__body { padding: 16px 20px 20px; }
 .team-card h3 { font-size: 1rem; margin-bottom: 4px; line-height: 1.3; color: var(--navy); }
 .team-card .role { color: #c9a84c; font-weight: 600; font-size: 0.8rem; margin-bottom: 12px; display: block; }
-.team-card p.bio { color: #737373; font-size: 0.86rem; line-height: 1.5; }
+.team-card p.bio { color: #737373; font-size: 0.86rem; line-height: 1.5; margin-bottom: 12px; }
+
+/* ===== Team profile pages ===== */
+.profile-hero { background: var(--profile-blue); color: #fff; padding: 56px 0 44px; border-bottom: 6px solid var(--gold-light); }
+.profile-hero__back {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: rgba(255,255,255,0.85); font-size: 0.86rem; font-weight: 600; margin-bottom: 28px;
+}
+.profile-hero__back svg { transform: rotate(180deg); }
+.profile-hero__inner { display: flex; gap: 48px; align-items: center; }
+.profile-hero__photo {
+  width: 220px; height: 220px; border-radius: var(--radius);
+  object-fit: cover; flex-shrink: 0; background: rgba(255,255,255,0.15);
+}
+.profile-hero__info h1 { color: #fff; margin-bottom: 6px; font-size: clamp(1.7rem, 3vw, 2.1rem); }
+.profile-hero__title { color: rgba(255,255,255,0.85); font-weight: 600; font-size: 0.98rem; display: block; }
+.profile-hero__divider { height: 1px; background: rgba(255,255,255,0.25); margin: 22px 0; }
+.profile-hero__contact { display: flex; flex-direction: column; gap: 6px; font-size: 0.92rem; color: rgba(255,255,255,0.9); }
+
+.profile-bio { background: var(--bg-gray); padding: 72px 0; }
+.profile-bio h2 { text-align: center; margin-bottom: 28px; }
+.profile-bio__text { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.profile-bio__text p { color: #404040; font-size: 0.98rem; line-height: 1.7; }
+.profile-bio__text p.quote { font-style: italic; color: var(--navy-text); }
 
 /* ===== Services page ===== */
 .service-row {
@@ -463,9 +489,19 @@ p { margin: 0; line-height: 1.6; }
 .service-row.reverse .service-row__text { order: 2; }
 .service-row.reverse .service-row__img { order: 1; }
 .service-row__img img { border-radius: var(--radius); width: 100%; object-fit: cover; height: 260px; }
+.service-row__img .placeholder-box { background: #d9d9d9; border-radius: var(--radius); width: 100%; height: 260px; }
 .service-row__text { display: flex; flex-direction: column; gap: 16px; }
 .service-row p.desc { color: #404040; font-size: 0.97rem; line-height: 1.65; }
 .service-row .meta { color: #404040; font-size: 0.97rem; }
+
+/* ===== Individual service detail pages ===== */
+.service-detail__breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.92rem; color: #444; margin-bottom: 18px;
+}
+.service-detail__breadcrumb svg { flex-shrink: 0; }
+.service-detail__divider { height: 4px; width: 100%; background: var(--raspberry); border-radius: 2px; margin: 20px 0 0; }
+.service-detail .service-row { padding-top: 44px; }
 
 /* ===== Contact page ===== */
 .contact-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 80px; }
@@ -495,6 +531,7 @@ p { margin: 0; line-height: 1.6; }
 .info-block .label { color: var(--purple); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; display: block; }
 .info-block p { color: var(--ink); font-size: 0.97rem; line-height: 1.5; }
 .clinic-info img { border-radius: var(--radius); margin-top: 10px; width: 100%; height: 220px; object-fit: cover; }
+.clinic-info__map { border-radius: var(--radius); margin-top: 10px; width: 100%; height: 220px; border: 0; }
 
 .faq-section { background: var(--bg-gray); padding: 72px 0; }
 .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1px; }
