@@ -500,6 +500,14 @@ p { margin: 0; line-height: 1.6; }
 .service-row__img img { border-radius: var(--radius); width: 100%; object-fit: cover; height: 260px; }
 .service-row__img .placeholder-box { background: #d9d9d9; border-radius: var(--radius); width: 100%; height: 260px; }
 .service-row__text { display: flex; flex-direction: column; gap: 16px; }
+.service-row__cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.service-row__cta .btn { margin-top: 0; }
 .service-row p.desc { color: #404040; font-size: 0.97rem; line-height: 1.65; }
 .service-row .meta { color: #404040; font-size: 0.97rem; }
 
