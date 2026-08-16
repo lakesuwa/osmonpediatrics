@@ -59,7 +59,7 @@ button { font-family: inherit; cursor: pointer; }
 .wrap {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 24px 24px;
 }
 
 h1, h2, h3, h4 { color: var(--navy); margin: 0; line-height: 1.15; font-weight: 800; }
@@ -112,6 +112,15 @@ p { margin: 0; line-height: 1.6; }
 
 .btn--pastel-blue { background: var(--pastel-blue); color: #fff; }
 .btn--pastel-blue:hover { background: var(--pastel-blue-dark); }
+
+/* Small button variant for inline CTAs (matches Figma) */
+.btn--small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.btn--small.btn--pastel-blue { padding: 8px 16px; }
 
 .btn--blue-outline {
   background: rgba(255,255,255,0.1);
